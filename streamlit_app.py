@@ -1,20 +1,21 @@
-import pandas as pd
-import pandas_profiling
 import streamlit as st
 
-from streamlit_pandas_profiling import st_profile_report
+st.title('st.secrets')
 
-st.header('`streamlit_pandas_profiling`')
+st.write(st.secrets['message'])
 
-df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
-pr = df.profile_report()
+st.title('Customizing the theme of Streamlit apps')
 
-st_profile_report(pr)
+st.write('Contents of the `.streamlit/config.toml` file of this app')
 
-st.header('st.latex')
+st.code("""
+[theme]
+primaryColor="#F39C12"
+backgroundColor="#2E86C1"
+secondaryBackgroundColor="#AED6F1"
+textColor="#FFFFFF"
+font="monospace"
+""")
 
-st.latex(r'''
-     a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
-     \sum_{k=0}^{n-1} ar^k =
-     a \left(\frac{1-r^{n}}{1-r}\right)
-     ''')
+number = st.sidebar.slider('Select a number:', 0, 10, 5)
+st.write('Selected number from slider widget is:', number)
