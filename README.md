@@ -34,3 +34,5 @@
 **Day 17**\: st.secrets
 
 **Day 18**\: st.file_uploader
+
+**Day 19**\: How to layout your Streamlit app
