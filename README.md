@@ -32,3 +32,5 @@
 **Day 16**\: Customizing the theme of Streamlit apps
 
 **Day 17**\: st.secrets
+
+**Day 18**\: st.file_uploader
